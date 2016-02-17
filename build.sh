@@ -11,6 +11,9 @@ meteor &
 # Add bootstrap
 meteor add twbs:bootstrap
 
+# Add moment
+meteor add momentjs:moment
+
 # Get Mongo stuff: Messages.find().fetch()
 # Insert stuff in Mongo: Messages.insert({name: 'Thibault', message: 'Hello World :-)'})
 

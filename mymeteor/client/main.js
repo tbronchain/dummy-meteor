@@ -3,6 +3,9 @@ Template.messageList.helpers({
         return Messages.find({}, {
             sort: {timestamp: -1}
         });
+    },
+    prettyTime: function() {
+        return moment(this.timestamp).format('LTS');
     }
 });
 

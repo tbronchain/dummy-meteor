@@ -17,7 +17,11 @@
     I'm a message list
     <ul>
         {{#each messages }}
-        <li><strong>{{ name }}</strong>: {{ message }}</li>
+        <li>
+            <strong>{{ name }}</strong>
+            <small><i>{{ prettyTime }}</i></small>:
+            {{ message }}
+        </li>
         {{else}}
         <li>No Messages Found</li>
         {{/each}}
