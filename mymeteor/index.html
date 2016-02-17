@@ -4,8 +4,13 @@
 
 <body>
     <h1>Hello World~</h1>
+
+    {{> loginButtons }}
+
+    {{#if currentUser }}
     {{> messageForm }}
     {{> messageList }}
+    {{/if}}
 </body>
 
 <template name="messageList">
@@ -21,7 +26,6 @@
 
 <template name="messageForm">
     <div class="form" id="myform">
-        <input type="text" data-field="name" />
         <input type="text" data-field="message" />
         <button type="button" data-action="send">Send</button>
     </div>
