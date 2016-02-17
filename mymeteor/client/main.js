@@ -5,6 +5,7 @@ Template.messageList.helpers({
         });
     },
     prettyTime: function() {
+        // check moment.js website for formatting list
         return moment(this.timestamp).format('LTS');
     }
 });
