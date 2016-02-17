@@ -5,7 +5,9 @@ Template.messageList.helpers({
 });
 
 Template.messageForm.events({
-    'click button[data-action=send]': function(e){
+    'keydown input[data-field=message]': function(e){
+        if (e.keyCode != 13) {return;}
+
         var name = $('input[data-field=name]').val();
         var message = $('input[data-field=message]').val();
         Messages.insert({
