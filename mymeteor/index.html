@@ -9,4 +9,11 @@
 
 <template name="messageList">
     I'm a message list
+    <ul>
+        {{#each messages }}
+        <li><strong>{{ name }}</strong>: {{ message }}</li>
+        {{else}}
+        <li>No Messages Found</li>
+        {{/each}}
+    </ul>
 </template>
