@@ -1,6 +1,6 @@
 Template.messageList.helpers({
     messages: function() {
-        return Messages.find();
+        return Messages.find({}, {sort: {timestamp: -1}});
     }
 });
 
@@ -12,7 +12,8 @@ Template.messageForm.events({
         var message = $('input[data-field=message]').val();
         Messages.insert({
             name: name,
-            message: message
+            message: message,
+            timestamp: new Date()
         });
         $('input[data-field=message]').val('').focus();
     }
